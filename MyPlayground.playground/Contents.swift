@@ -30,8 +30,16 @@ else {
 
 var indiger:Int = 10
 let decimal:Double = 20.1255
+let someValu2:Double = 0.4522
+var coevnt:Int = Int(decimal)
+var convebtToDouble = Double(indiger) + someValu2
 
-var conevnt:Int = Int(decimal)
+typealias Distance = Double
+typealias Point2D = (x:Int , y:Int)
+var bkbTocnx:Distance = 400.45
+var centerPoint = (x:2,y:4)
+centerPoint.x
+
 
 var avg1 = 10
 var avg2 = 13
@@ -48,4 +56,31 @@ let b = 10
 let min = a < b ? a:b
 let max = a > b ? a:b
 print(max)
+
+
+var performance:Int? = 400
+var salary:Int = 50000
+if performance != nil{
+    salary + performance!
+}
+if let bonuse = performance{
+    salary+performance!
+}
+
+let pocketMonet = 400
+let pockerMoneyStr = "I have money \(pocketMonet)"
+
+
+//let firstName = "chaiyapod tuntimagun"
+//firstName.characters.count
+
+let HelloChaiyapod = "HelloChaiyapod"
+
+if(HelloChaiyapod.hasPrefix("Hel")){
+    print("true")
+}
+if(HelloChaiyapod.hasSuffix("pod")){
+    print("true")
+}
+
 
