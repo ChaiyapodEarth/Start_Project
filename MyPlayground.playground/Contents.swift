@@ -5,4 +5,7 @@ print("sdfsfd");
 print(str);
 var InputYoutCcore:Int? = 30
 print(InputYoutCcore!)
+2+10
+3*18
+
 
