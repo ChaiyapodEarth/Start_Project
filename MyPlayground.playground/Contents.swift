@@ -28,30 +28,30 @@ if ( testNumber % 2 == 0)
 else {
     print("zero")
 }
-
-//
+print("/////////////")
+//การเปลี่ยน Type
 var indiger:Int = 10
-let decimal:Double = 20.1255
+let decimal:Double = 20.1255898770870
 let someValu2:Double = 0.4522
 var coevnt:Int = Int(decimal)
 var convebtToDouble = Double(indiger) + someValu2
-
-//
+var sopmestring = String(indiger)
+var somtfloat = Float(decimal)
+print("/////////////")
+//ใช้ Typealias ใช้ตั้งชื่อเล่นของ Type
 typealias Distance = Double
 typealias Point2D = (x:Int , y:Int)
 var bkbTocnx:Distance = 400.45
 var centerPoint = (x:2,y:4)
-centerPoint.x
-
-//
+centerPoint
+print("/////////////")
+//ประกาศตัวแปร
 var avg1 = 10
 var avg2 = 13
 var ans2 = Double(avg1)/2
-
-//
 let NameDog:String = "dog"
 
-//
+//ประกาศตัวแปร tuple
 var coordinate = (x:21.23 , y:23.34)
 let someNumber = coordinate.x
 
@@ -61,8 +61,10 @@ let b = 10
 let min = a < b ? a:b
 let max = a > b ? a:b
 print(max)
+print("/////////////")
 
-//
+
+//นำตัวแปร nil ไปใช้ โดยไม่ต้องประกาศว่า != nil
 var performance:Int? = 400
 var salary:Int = 50000
 if performance != nil{
@@ -71,14 +73,16 @@ if performance != nil{
 if let bonuse = performance{
     salary+performance!
 }
-//
+print("/////////////")
+
+
+//แทรกตัวแปร
 let pocketMonet = 400
 let pockerMoneyStr = "I have money \(pocketMonet)"
+print("/////////////")
 
 
-//let firstName = "chaiyapod tuntimagun"
-//firstName.characters.count
-
+//ใช้เช็ค String
 let HelloChaiyapod = "HelloChaiyapod"
 
 if(HelloChaiyapod.hasPrefix("Hel")){
@@ -88,10 +92,14 @@ if(HelloChaiyapod.hasSuffix("pod")){
     print("true")
 }
 
+print("/////////////")
+
 
 //ประหาศ Array
 var fruits1:[String] = ["Banan" , "Apple" , "Mango"]
 var fruits2 = ["Banan" , "Apple" , "Mango"]
+
+
 var fruits3:Array<String> = ["Banan" , "Apple" , "Mango"]
 var empty:[Int] = []
 var threeDouble:[Int] = [Int](repeating: 3, count: 6) //ใช้ประกาศ Array ซ้ำกัน
@@ -126,15 +134,19 @@ if(fruits3.isEmpty){
     print("Empty")
 }
 
+print("/////////////")
 
-//
+
+//การเปลี่ยนแปลง arry
 var color  = ["red" , "yellow" , "green"]
 var mycolor = color[0...2]
 var haftcoloe = color[1..<2]
 color[1...2] = ["White" , "Black"]
 print(color)
+print("/////////////")
 
-//
+
+//ใช้ Dictionary
 var currency:Dictionary<String,String> = ["USD":"Us Dollar" , "THB":"Thai Bath"]
 var currency2:[String:Double] = ["USD":30.25 , "THB":1.00]
 var currency3 = ["USD":"US Dollar"]
@@ -155,6 +167,29 @@ print(currency)
 
 currency2.count
 
-
 let Key = [String](currency2.keys)
 let ValueOfCurrency = [Double](currency2.values)
+print(Key)
+print("/////////////")
+
+
+//ใช้ any type
+var aa:Any = 12
+var bb:Any = "Hello"
+//var bb:Any = "10
+var ArrysomeAny:[Any] = [1,2,3]
+if ArrysomeAny.last is String{
+    print("value in 3st of Arry is a String")
+}else if ArrysomeAny[2] is Int{
+    print("Indiger")
+}
+
+if let intA = aa as? Int{ //ถ้า aa มีค่าเป็น int ถึงจะทำ
+    print(intA)
+}
+
+var cc = 30
+cc += bb as! Int //บอกว่า b เป็น int แน่ๆ
+
+
+
