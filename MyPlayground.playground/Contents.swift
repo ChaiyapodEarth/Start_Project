@@ -64,6 +64,8 @@ print(max)
 print("/////////////")
 
 
+
+
 //นำตัวแปร nil ไปใช้ โดยไม่ต้องประกาศว่า != nil
 var performance:Int? = 400
 var salary:Int = 50000
@@ -76,10 +78,14 @@ if let bonuse = performance{
 print("/////////////")
 
 
+
+
 //แทรกตัวแปร
 let pocketMonet = 400
 let pockerMoneyStr = "I have money \(pocketMonet)"
 print("/////////////")
+
+
 
 
 //ใช้เช็ค String
@@ -93,6 +99,8 @@ if(HelloChaiyapod.hasSuffix("pod")){
 }
 
 print("/////////////")
+
+
 
 
 //ประหาศ Array
@@ -137,6 +145,8 @@ if(fruits3.isEmpty){
 print("/////////////")
 
 
+
+
 //การเปลี่ยนแปลง arry
 var color  = ["red" , "yellow" , "green"]
 var mycolor = color[0...2]
@@ -144,6 +154,8 @@ var haftcoloe = color[1..<2]
 color[1...2] = ["White" , "Black"]
 print(color)
 print("/////////////")
+
+
 
 
 //ใช้ Dictionary
@@ -173,10 +185,12 @@ print(Key)
 print("/////////////")
 
 
+
+
 //ใช้ any type
 var aa:Any = 12
-var bb:Any = "Hello"
-//var bb:Any = "10
+//var bb:Any = "Hello"
+var bb:Any = 10
 var ArrysomeAny:[Any] = [1,2,3]
 if ArrysomeAny.last is String{
     print("value in 3st of Arry is a String")
@@ -190,6 +204,158 @@ if let intA = aa as? Int{ //ถ้า aa มีค่าเป็น int ถึ�
 
 var cc = 30
 cc += bb as! Int //บอกว่า b เป็น int แน่ๆ
+print("/////////////")
+
+
+
+//ใช้ loop while loop เช็คก่อนค่อยทำ   repeat ทำก่อนค่อยเช็ค  For loop กำหนดค่าเริ่มต้น
+var count = 0
+var i = 1
+var star = ""
+
+while count < 5 {
+    print(star)
+//    print("hello \(i)")
+    star += "*"
+    count += 1
+    i += 1
+}
+
+var count2 = 0
+repeat{
+    print("Hello repest")
+    count2 += 1
+} while count2 < 5
+
+var rang = 1...3
+//for var value in rang{
+//    print("Hello for")
+//}
+for valueForloop in 1...3{
+    print("Hello for")
+}
+
+var colorr:[String] = ["red" , "blue" , "greeb"]
+for (index , value) in colorr.enumerated(){ //index เป็นแค่ตัวเลข
+    print("index: \(index) and item:\(value)")
+}
+
+var colorforKey = ["THB" : "Thaibath" , "US": "Us Dollar"]
+for (/*_*/key , valuee) in colorforKey{ //ใช้กับ dictionary
+    print("key: \(key) and valueee:\(valuee)")
+}
+
+var evemtNumer:[Int] = []
+//for number in 1...20{
+//    if number % 2 == 0{
+//        evemtNumer.append(number)
+//    }
+//}
+//print(evemtNumer)
+for number in 1...20 where number % 2 == 0{
+    evemtNumer.append(number)
+}
+
+
+for number in (1...20).reversed() where number % 2 == 0{
+    evemtNumer.append(number)
+}
+print(evemtNumer)
+
+var rangg = stride(from: 10, to: 1, by: -3)
+for value in rangg{
+    print(value)
+}
+print("//////////////")
+
+
+//ใช้ Switch
+var animall =  "🐈"
+switch animall {
+case "🐈":
+    print("cat")
+case "🐓":
+    print("Chicken")
+case "🐟" , "🐋":
+    print("fish")
+default:
+    print("Unknow")
+}
+
+var counstarr = 1000 // ใช้ pang matching
+var textt = ""
+switch counstarr {
+case 0:
+    textt = "NO more star"
+case 1...10:
+    textt = "10 star"
+case 11...100:
+    textt = "100 star"
+default:
+    textt = "a lot of star"
+}
+print(textt)
+
+
+let pointt = (1,3) // ใช้ tuple  matching
+switch pointt {
+case (0,0):
+    print("center")
+case (_,0):
+    print("Point is on x-axis")
+case(0,_):
+    print("Point is on y-axis")
+case( -2...2 , -2...2):
+    print("Point is on picture")
+default:
+    print("unknow")
+}
+
+
+
+//การใช้  Control
+for numberForControl in (1...10).reversed()
+{
+    if numberForControl == 9{
+        continue
+    }
+    if numberForControl == 3{
+        break
+    }
+    print(numberForControl)
+}
+
+let Chai = "Chaiyapod Tuntimanigun"
+var OutPut = ""
+for cha in Chai{
+    
+    switch cha {
+    case "a" , "e" , "i" ,"o","u":
+        continue
+    default:
+        OutPut += String(cha)
+    }
+}
+print(OutPut)
+
+let intergerToDescribe = 5
+var description = " the number \(intergerToDescribe) is "
+switch intergerToDescribe {
+case 2,3,5,7,9,11,13,17,19:
+    description += "a prime number , ans also"
+    fallthrough //จะยังเล่น  case ข้างล่าง
+default:
+    description += "an interger"
+}
+print(description)
+
+
+
+
+
+
+
+
 
 
 
