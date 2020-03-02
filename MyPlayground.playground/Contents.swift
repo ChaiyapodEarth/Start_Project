@@ -155,6 +155,10 @@ color[1...2] = ["White" , "Black"]
 print(color)
 print("/////////////")
 
+var age = [1,2,3,4,5]
+age[1...3]
+age.count
+
 
 
 
@@ -282,7 +286,7 @@ default:
     print("Unknow")
 }
 
-var counstarr = 1000 // ใช้ pang matching
+var counstarr = 1000 // ใช้ rang matching
 var textt = ""
 switch counstarr {
 case 0:
