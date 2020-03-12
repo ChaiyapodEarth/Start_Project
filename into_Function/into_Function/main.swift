@@ -124,7 +124,7 @@ func  printUser (info:[String:String])  {
     print("\(name) \(lastname) \(email)")
 }
 
-let anakin = ["name":"Anakin" , "lastname":"Taun","email":"zfsdfsdf@"]
+let anakin = ["Name":"Anakin" , "lastname":"Taun","email":"zfsdfsdf@"]
 printUser(info: anakin)
 
 
